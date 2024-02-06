@@ -73,11 +73,11 @@ The [Mill build tool](https://com-lihaoyi.github.io/mill) can be installed and u
 
 ```sh
 // To generate the Verilog from the example
-mill projectname.runMain projectname.MyTopLevelVerilog
+mill bls.runMain bls.MyTopLevelVerilog
 
 // To generate the VHDL from the example
-mill projectname.runMain projectname.MyTopLevelVhdl
+mill bls.runMain bls.MyTopLevelVhdl
 
 // To run the testbench
-mill projectname.runMain projectname.MyTopLevelSim
+mill bls.runMain bls.MyTopLevelSim
 ```
