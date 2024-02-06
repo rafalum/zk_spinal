@@ -1,4 +1,4 @@
-package projectname
+package bls
 
 import spinal.core._
 import spinal.core.sim._
