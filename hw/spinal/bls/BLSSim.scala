@@ -8,20 +8,10 @@ object BLSSim extends App {
     // Fork a process to generate the reset and the clock on the dut
     dut.clockDomain.forkStimulus(period = 10)
 
-    dut.io.a #= 5
+    dut.io.a #= 12
     dut.io.b #= 10
 
-    dut.io.m #= 107
-    dut.io.m_prime #= 107
-
-    dut.clockDomain.waitFallingEdge(5)
-    /*
-    dut.io.start #= true
-    dut.clockDomain.waitRisingEdge()
-    dut.io.start #= false
-
-    dut.clockDomain.waitRisingEdgeWhere(dut.io.done.toBoolean)
-     */
+    dut.clockDomain.waitFallingEdge()
 
     println(dut.io.result.toBigInt)
 
