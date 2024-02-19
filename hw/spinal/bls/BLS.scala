@@ -1,24 +1,22 @@
 package bls
 
+import bls.dataTypes.JacobianPoint
 import spinal.core._
+import spinal.lib.{master, slave}
 
 
 // Hardware definition
-case class BLS(N: Int = 8, MOD_PRIME: Int = 107) extends Component {
-
+case class BLS(N: Int = 6, MOD_PRIME: Int = 23) extends Component {
 
   val io = new Bundle {
-    val a = in UInt(N bits)
-    val b = in UInt(N bits)
-    val result = out UInt(N bits)
+    val a = slave Stream JacobianPoint(N)
+    val b = slave Stream JacobianPoint(N)
+    val c = master Stream JacobianPoint(N)
   }
 
-  val simpleModuloMultiplier = new SimpleModuloMultiplier(N = N, MOD_PRIME = MOD_PRIME)
+  val pointAdder = new JacobianPointAdder(N = N, MOD_PRIME = MOD_PRIME)
 
-  simpleModuloMultiplier.io.a := io.a
-  simpleModuloMultiplier.io.b := io.b
-
-  io.result := simpleModuloMultiplier.io.o
+  pointAdder.io <> io
 
 }
 
