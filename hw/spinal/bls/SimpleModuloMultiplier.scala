@@ -12,6 +12,6 @@ class SimpleModuloMultiplier(N: Int, MOD_PRIME: Int) extends Component {
 
   val result = (io.a * io.b) % IntToUInt(MOD_PRIME).resize(N bits)
 
-  io.o := RegNext(result)
+  io.o := result
 
 }
