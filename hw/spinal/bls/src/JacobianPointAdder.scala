@@ -1,4 +1,4 @@
-package bls
+package bls.src
 
 import bls.src.dataTypes.JacobianPoint
 import spinal.core._

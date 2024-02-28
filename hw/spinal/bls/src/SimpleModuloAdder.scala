@@ -1,4 +1,4 @@
-package bls
+package bls.src
 
 import spinal.core._
 

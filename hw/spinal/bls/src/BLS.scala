@@ -1,8 +1,6 @@
-package bls
+package bls.src
 
-import bls.dataTypes.JacobianPoint
 import spinal.core._
-import spinal.lib.{master, slave}
 
 
 // Hardware definition
