@@ -1,4 +1,4 @@
-package bls.dataTypes
+package bls.src.dataTypes
 
 import spinal.core._
 
