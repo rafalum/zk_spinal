@@ -1,6 +1,6 @@
 package bls
 
-import bls.dataTypes.JacobianPoint
+import bls.src.dataTypes.JacobianPoint
 import spinal.core._
 import spinal.lib._
 import spinal.lib.fsm._
